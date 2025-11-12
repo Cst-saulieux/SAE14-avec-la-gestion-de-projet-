@@ -1,0 +1,50 @@
+body {
+  /* image de fond */
+  background-image: url("fondblacktemplar.jpg");
+  background-size: cover;        /* prend tout l’écran */
+  background-position: center;   /* centrée */
+  background-repeat: no-repeat;  /* pas de répétition */
+  background-attachment: fixed;  /* reste fixe au scroll */
+  min-height: 100vh;             /* au moins 100% de la hauteur de la fenêtre */
+  margin: 0;
+}
+
+.texte-impact {
+  position: absolute;
+  top: 45%;
+  left: 5%; /* ✅ texte placé à gauche */
+  transform: translateY(-50%); /* garde le centrage vertical */
+
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: clamp(2rem, 6vw, 6rem); /* responsive : s’adapte à la largeur de l’écran */
+  color: white;
+  text-align: left; /* ✅ alignement du texte à gauche */
+  line-height: 0.9; /* espace entre LES et BLACK TEMPLARS */
+  text-shadow: 3px 3px 10px black; /* lisibilité sur fond sombre */
+  z-index: 10;
+  margin: 0;
+}
+
+.texte-impact .petit {
+  font-size: 0.6em; /* rend "LES" plus petit que "BLACK TEMPLARS" */
+}
+
+/* ajustement pour mobile */
+@media (max-width: 768px) {
+  .texte-impact {
+    left: 10%;
+    top: 50%;
+    text-align: center; /* centré si tu veux recentrer sur mobile */
+  }
+}
+
+
+/* Style spécifique à la page HELP MEEEE */
+body.helpme-page {
+    background-image: url('helpmeeee.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+}
